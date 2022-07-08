@@ -8,6 +8,29 @@
     <title>My Website</title>
 </head>
 <body>
+    <!-- Header Section -->
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="#hero"><h1><span>A</span>aron <span>K</span>o</h1></a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                    </div>
+                    <ul>
+                        <li><a href="#hero" data-after="Home">Home</a></li>
+                        <li><a href="#services" data-after="Service">Services</a></li>
+                        <li><a href="#projects" data-after="Projects">Projects</a></li>
+                        <li><a href="#about" data-after="About">About</a></li>
+                        <li><a href="#contact" data-after="Contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Header Section -->
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero container">
@@ -15,7 +38,7 @@
                 <h1>Hello, <span></span></h1>
                 <h1>My Name is <span></span></h1>
                 <h1>Aaron <span></span></h1>
-                <a href="#" type="button" class="cta">Portfolio</a>
+                <a href="#projects" type="button" class="cta">Portfolio</a>
             </div>
         </div>
     </section>
@@ -35,17 +58,6 @@
             </div>
 
             <div class="service-bottom">
-                <div class="service-item">
-                    <div class="icon">
-                        <img src="./img/Icons/chip.png" alt="chip img">
-
-                    </div>
-                    <h2>Mars Rover</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-                    </p>
-                </div>
                 <div class="service-item">
                     <div class="icon">
                         <img src="./img/Icons/chip.png" alt="chip img">
@@ -226,7 +238,7 @@
         </div>
     </section>
     <!-- End Footer Section -->
-
+    <script src="./app.js"></script>
 
 </body>
 </html>
