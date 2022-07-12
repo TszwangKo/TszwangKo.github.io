@@ -5,6 +5,9 @@ const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a'
 //* v The space between .header and .contiainer is important ! v
 const header = document.querySelector('.header.container');
 
+var vid = document.getElementById("piano");
+vid.playbackRate = 0.8;
+
 hamburger.addEventListener('click',()=>{
     hamburger.classList.toggle('active');
     mobile_menu.classList.toggle('active');
@@ -26,3 +29,5 @@ menu_item.forEach((item)=>{
         mobile_menu.classList.toggle('active');
     })
 })
+
+// TODO: make scrolling smoother (https://css-tricks.com/snippets/jquery/smooth-scrolling/)

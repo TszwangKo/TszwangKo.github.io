@@ -14,6 +14,14 @@ html{
 a{
     text-decoration:none;
 }
+
+hr {
+    border: none;
+    border-top: 2px solid #e8aa42;
+    margin: 0 auto;
+    height: 10px;
+    width: 30%;
+}
 .container{
     min-height: 100vh;
     width: 100%;
@@ -26,7 +34,7 @@ a{
     padding: 10px 30px;
     color: white;
     background-color: transparent;
-    border: 2px solid crimson;
+    border: 2px solid #e8aa42;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -37,7 +45,7 @@ a{
 
 .cta:hover{
     color: white;
-    background-color: crimson;
+    background-color: #e8aa42;
 }
 .brand h1{
     font-size: 3rem;
@@ -45,7 +53,7 @@ a{
     color: white;
 }
 .brand h1 span{
-    color: crimson;
+    color: #e8aa42;
 }
 .section-title{
     font-size: 4rem;
@@ -58,7 +66,7 @@ a{
 }
 
 .section-title span{
-    color:crimson;
+    color:#e8aa42;
 }
 /* Ensures that image will have enough space */
 img{
@@ -147,7 +155,7 @@ p{
     opacity: 1;
 }
 #header .nav-list ul li a:hover{
-    color: crimson;
+    color: #e8aa42;
 }
 /*TODO: Make width shorter when active as well */
 /*TODO: Make animation stop when menu appeared */
@@ -225,7 +233,7 @@ p{
 /***************************** Hero Section *****************************/
 
 #hero{
-    background-image: url(./img/background.png);
+    background-image: url(./img/thumbnail_image1_auto_x2.jpg);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -275,7 +283,7 @@ p{
     left: 0;
     height: 100%;
     width: 0;
-    background-color: crimson;
+    background-color: #e8aa42;
     animation: text_reveal_box 1s ease;
     animation-delay: .3s;
 }
@@ -325,17 +333,37 @@ p{
 #services .service-item{
     flex-basis: 80%;
     display:flex;
+    height: 500px;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     padding: 30px;
     border-radius: 10px;
     background-image: url(./img/img-1.png);
-    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     margin: 10px 5%;
     position: relative;
     overflow: hidden;
     z-index: 1;
+}
+/* TODO: Make video zoom as well */
+/* TODO: mobile view needs changing */
+#services .service-item:nth-child(1){
+    background-image: url(./img/background/arm.avif);
+}
+#services .service-item:nth-child(2){
+    background-image: url(./img/background/gds-holdings--600.png);
+}
+#services .service-item:nth-child(3){
+    background-image: url(./img/background/Earth.jpg);
+}
+#services .service-item:nth-child(4){
+    background-image: url(./img/background/ORII.jpg);
+}
+#services .service-item:nth-child(4)::after .service-item:nth-child(4)::after{
+    opacity:.9;
 }
 
 #services .service-item::after{
@@ -354,6 +382,7 @@ p{
     height: 80px;
     width: 80px;
     margin-bottom: 20px;
+    position: relative;
 }
 
 #services .service-bottom .icon img{
@@ -373,7 +402,10 @@ p{
     font-size: 1.4rem;
     line-height: 1.9rem;
     color: white;
-    text-align: left;
+    text-align: justify;
+    text-justify: distribute;
+    /* word-spacing: -4px; */
+    overflow-wrap: break-word;
 }
 
 /************************ End Services Section ****************************/
@@ -403,8 +435,22 @@ p{
     margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
-
 }
+#projects .project-item:nth-child(1) .project-img video{
+    flex-basis: 50%;
+    width: 100%;
+    bottom: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#projects .project-item:nth-child(2) .project-img video{
+    flex-basis: 50%;
+    width: 100%;
+    bottom: 370px;
+    overflow: hidden;
+    position: relative;
+}
+
 #projects .project-info{
     padding: 30px;
     flex-basis: 50%;
@@ -470,6 +516,25 @@ p{
     width: 250px;
     height: 360px;
 }
+#about .col-left .about-img{
+    clip: rect(0, 100%, 100%, 0);
+    position: relative;
+    border: 10px solid white;
+    margin: auto 0;
+    background-color: white;
+}
+
+#about .col-left .about-img::after{
+    content: '';
+    position: absolute;
+    left:-33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid #e8aa42;
+    z-index: -1;
+}
+
 #about .col-right{
     width: 100%;
 }
@@ -487,23 +552,6 @@ p{
     margin-bottom: 50px;
     padding: 10px 20px;
     font-size: 2rem;
-}
-#about .col-left .about-img{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    border: 10px solid white;
-    margin: 10px;
-}
-#about .col-left .about-img::after{
-    content: '';
-    position: absolute;
-    left:-33px;
-    top: 19px;
-    height: 98%;
-    width: 98%;
-    border: 7px solid crimson;
-    z-index: -1;
 }
 
 /*************************** End About Section ****************************/
@@ -572,20 +620,35 @@ p{
     margin-bottom: 30px;
 }
 #footer .social-item{
+    padding-top:10px;
     height: 50px;
     width: 50px;
     margin: 0 5px;
 }
 #footer .social-item img{
-    filter: grayscale(1);
-    transition: .5s ease filter;
+    transform: scale(1);
+    transition: .5s ease transform;
 }
 #footer .social-item:hover img{
-    filter: grayscale(0);
+    transform: scale(1.2);
 }
 #footer p{
     color:white;
     font-size: 1.3rem;
+    text-align: center;
+}
+#footer p span{
+    color:grey;
+    font-size: 1.3rem;
+    text-align: center;
+}
+#footer a{
+    color:grey;
+    text-decoration: underline;
+}
+#footer .social-icon img{
+    height:50px;
+    width:50px;
 }
 /************************** End Footer Section ****************************/
 /************************       Keyframes      ****************************/
@@ -607,7 +670,7 @@ p{
 }
 @keyframes text_reveal_name{
     100% {
-        color: crimson;
+        color: #e8aa42;
         font-weight: 500;
     }
 }
@@ -687,7 +750,7 @@ p{
         left: -45px;
         top: 34px;
         height: 98%;
-        border: 10px solid crimson;
+        border: 10px solid #e8aa42;
     }
     #about .col-right{
         text-align: left;
@@ -736,7 +799,7 @@ p{
 }
 /************************ END  Media Query For Tablet ***********************/
 /****************************  Media Query For Desktop **********************/
-@media only screen and (min-width:1200px){
+@media only screen and (min-width: 1200px){
     #header .hamburger{
         display:none;
     }
@@ -756,9 +819,14 @@ p{
     #header .nav-list ul a:after{
         display: none;
     }
-    #services .service-bottom .service-item{
-        flex-basis: 22%;
-        margin: 1.5%;
+    #contact .contact-item .icon{
+        height: 120px;
+        width: 120px;
+        margin: auto;
     }
+    /* #services .service-bottom .service-item{
+        flex-basis: 470px;
+        margin: 1.5%;
+    } */
 }
 /************************ END  Media Query For Desktop **********************/
