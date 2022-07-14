@@ -311,7 +311,7 @@ p{
 }
 #services .service-top {
     width: 50%;
-    /* min-width: 50px; */
+    min-width: 350px;
 }
 #services .service-top p{
     color: black;
@@ -360,7 +360,8 @@ p{
     background-image: url(./img/background/Earth.jpg);
 }
 #services .service-item:nth-child(4){
-    background-image: url(./img/background/ORII.jpg);
+    background-image: url(./img/background/ORII-1.jpg);
+    background-position: center top;
 }
 #services .service-item:nth-child(4)::after .service-item:nth-child(4)::after{
     opacity:.9;
@@ -430,7 +431,7 @@ p{
     align-items: center;
     justify-items: center;
     flex-direction: column;
-    height: 600px;
+    height: 700px;
     width: 80%;
     margin: 20px auto;
     overflow: hidden;
@@ -446,7 +447,7 @@ p{
 #projects .project-item:nth-child(2) .project-img video{
     flex-basis: 50%;
     width: 100%;
-    bottom: 370px;
+    bottom: 300px;
     overflow: hidden;
     position: relative;
 }
@@ -686,7 +687,25 @@ p{
 }
 /************************     End Keyframes     ****************************/
 
-
+@media only screen and (max-width:767px){
+    #hero{
+        background-position: top right;
+    }
+    #projects .project-item:nth-child(1) .project-img video{
+        flex-basis: 50%;
+        width: 100%;
+        bottom: 225px;
+        overflow: hidden;
+        position: relative;
+    }
+    #projects .project-item:nth-child(2) .project-img video{
+        flex-basis: 50%;
+        width: 100%;
+        bottom: 275px;
+        overflow: hidden;
+        position: relative;
+    }
+}
 
 /**************************** Media Query For Tablet ************************/
 @media only screen and (min-width:768px){
@@ -731,7 +750,8 @@ p{
     }
     #projects .all-projects .project-img{
         height: 100%;
-    }
+    } 
+    
     /** End Projects */
     /** About */
     #about .about{
