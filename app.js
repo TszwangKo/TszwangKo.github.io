@@ -30,4 +30,40 @@ menu_item.forEach((item)=>{
     })
 })
 
+
+
+
+var player = document.getElementById("player");
+const btn = document.querySelector('.about .col-right .player .control .button');
+let progress=document.querySelector('.about .col-right .player .info .bar .progress');
+let time=document.querySelector('.about .col-right .player .time');
+
+var playpause = function () {
+    btn.classList.toggle("paused");
+    if (player.paused){
+        player.play();
+    }else{
+        player.pause();
+    }
+}
+btn.addEventListener('click', playpause )
+
+player.ontimeupdate = function() {
+    let ct = player.currentTime;
+    time.innerHTML = timeFormat(ct);
+    //proress
+    let duration = player.duration;
+    prog = Math.floor((ct*100)/duration);
+    progress.style.setProperty("--progress",prog + "%");
+}
+
+function timeFormat(ct){
+    minutes=Math.floor(ct/60);
+    seconds=Math.floor(ct%60);
+
+    if(seconds<10){
+        seconds="0"+seconds;
+    }
+    return minutes+":"+seconds;
+}
 // TODO: make scrolling smoother (https://css-tricks.com/snippets/jquery/smooth-scrolling/)

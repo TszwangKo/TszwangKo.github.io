@@ -451,11 +451,21 @@ p{
     overflow: hidden;
     position: relative;
 }
-
+#projects .project-item:nth-child(3) .project-img video{
+    flex-basis: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
 #projects .project-info{
     padding: 30px;
     flex-basis: 50%;
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -464,7 +474,8 @@ p{
     color: white;
 }
 
-#projects .project-info h1{
+#projects .project-info h1 a{
+    color:white;
     font-size: 4rem;
     font-weight: 500;
 }
@@ -554,7 +565,76 @@ p{
     padding: 10px 20px;
     font-size: 2rem;
 }
+#about .player{
+    background-color: #e8aa42;
+    display: grid;
+    grid-template-columns: 48px 1fr 48px;
+    grid-gap:16px;
+    padding: 8px 24px;
+    position: relative;
+    border-radius: 64px;
+}
+#about .control, .time{
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 16px;
+}
+#about .control, .time{
+    text-align: right;
+    color:white;
+}
+#about .button{
+    transform:scale(1);
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 12px;
 
+    border-color: transparent transparent transparent white;
+    transition: 100ms all ease, .5s transform ease;
+    cursor: pointer;
+
+    /* play state */
+    border-style: solid;
+    border-width: 6px 0 6px 10px;
+    cursor: pointer;
+}
+#about .paused{
+    border-style: double;
+    border-width: 0px 0 0px 10px;
+}
+#about .button:hover{
+    transform: scale(1.5);
+}
+#about .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color:white;
+}
+#about .bar{
+    --space: -4px;
+    background-color: #eddbba;
+    overflow: hidden;
+    top: var(--space);
+    right: var(--space);
+    left: var(--space);
+    bottom: var(--space);
+    position: absolute;
+    border-radius: 64px;
+    z-index:-2;
+}
+#about #progress{
+    display:block;
+    width: var(--progress,0%);
+    background-color: #FAC213;
+    transition: all 4s linear;
+    height: 100%;
+}
 /*************************** End About Section ****************************/
 /*************************** Contact Section ******************************/
 #contact .contact{
