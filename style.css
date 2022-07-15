@@ -801,7 +801,7 @@ p{
 
 @media only screen and (max-width:767px){
     #hero{
-        background-position: top right;
+        background-position: 80% 10%;
     }
     #projects .project-item:nth-child(1) .project-img video{
         flex-basis: 50%;
