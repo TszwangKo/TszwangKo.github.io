@@ -233,7 +233,13 @@ p{
 /***************************** Hero Section *****************************/
 
 #hero{
-    background-image: url(./img/thumbnail_image1_auto_x2.jpg);
+    background-image: url(./img/thumbnail_image1.jpg);
+    background-image: -webkit-image-set(
+        url("./img/thumbnail_image1_small.jpg") 1x,
+        url("./img/thumbnail_image1.jpg") 2x);
+      background-image: image-set(
+        url("./img/thumbnail_image1_small.jpg") 1x,
+        url("./img/thumbnail_image1.jpg") 2x);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -351,16 +357,42 @@ p{
 /* TODO: Make video zoom as well */
 /* TODO: mobile view needs changing */
 #services .service-item:nth-child(1){
-    background-image: url(./img/background/arm.avif);
+    background-image: url(./img/background/arm.jpg);
+    background-image: -webkit-image-set(
+        url("./img/background/arm_small.jpg") 1x,
+        url("./img/background/arm.jpg") 2x);
+      background-image: image-set(
+        url("./img/background/arm_small.jpg") 1x,
+        url("./img/background/arm.jpg") 2x);
 }
 #services .service-item:nth-child(2){
     background-image: url(./img/background/gds-holdings--600.png);
+    background-image: -webkit-image-set(
+        url("./img/background/gds-holdings--600_small.png") 1x,
+        url("./img/background/gds-holdings--600.png") 2x);
+      background-image: image-set(
+        url("./img/background/gds-holdings--600_small.png") 1x,
+        url("./img/background/gds-holdings--600.png") 2x);
+    
 }
 #services .service-item:nth-child(3){
     background-image: url(./img/background/Earth.jpg);
+    background-image: -webkit-image-set(
+        url("./img/background/Earth_small.jpg") 1x,
+        url("./img/background/Earth.jpg") 2x);
+      background-image: image-set(
+        url("./img/background/Earth_small.jpg") 1x,
+        url("./img/background/Earth.jpg") 2x);
+
 }
 #services .service-item:nth-child(4){
     background-image: url(./img/background/ORII-1.jpg);
+    background-image: -webkit-image-set(
+        url("./img/background/ORII-1_small.jpg") 1x,
+        url("./img/background/ORII-1.jpg") 2x);
+      background-image: image-set(
+        url("./img/background/ORII-1_small.jpg") 1x,
+        url("./img/background/ORII-1.jpg") 2x);
     background-position: center top;
 }
 #services .service-item:nth-child(4)::after .service-item:nth-child(4)::after{
