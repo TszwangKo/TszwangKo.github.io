@@ -234,12 +234,6 @@ p{
 
 #hero{
     background-image: url(./img/thumbnail_image1.jpg);
-    background-image: -webkit-image-set(
-        url("./img/thumbnail_image1_small.jpg") 1x,
-        url("./img/thumbnail_image1.jpg") 2x);
-      background-image: image-set(
-        url("./img/thumbnail_image1_small.jpg") 1x,
-        url("./img/thumbnail_image1.jpg") 2x);
     background-size: cover;
     background-position: top center;
     position: relative;
