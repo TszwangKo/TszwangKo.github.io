@@ -364,7 +364,7 @@ p{
     background-image: -webkit-image-set(
         url("./img/background/gds-holdings--600_small.png") 1x,
         url("./img/background/gds-holdings--600.png") 2x);
-      background-image: image-set(
+    background-image: image-set(
         url("./img/background/gds-holdings--600_small.png") 1x,
         url("./img/background/gds-holdings--600.png") 2x);
     
@@ -374,7 +374,7 @@ p{
     background-image: -webkit-image-set(
         url("./img/background/Earth_small.jpg") 1x,
         url("./img/background/Earth.jpg") 2x);
-      background-image: image-set(
+    background-image: image-set(
         url("./img/background/Earth_small.jpg") 1x,
         url("./img/background/Earth.jpg") 2x);
 
@@ -384,7 +384,7 @@ p{
     background-image: -webkit-image-set(
         url("./img/background/ORII-1_small.jpg") 1x,
         url("./img/background/ORII-1.jpg") 2x);
-      background-image: image-set(
+    background-image: image-set(
         url("./img/background/ORII-1_small.jpg") 1x,
         url("./img/background/ORII-1.jpg") 2x);
     background-position: center top;
@@ -548,12 +548,12 @@ p{
     max-width: 1200px;
     margin: 0 auto;
     padding: 100px 20px;
-    
 }
 #about .col-left{
     width: 250px;
     height: 360px;
 }
+
 #about .col-left .about-img{
     clip: rect(0, 100%, 100%, 0);
     position: relative;
@@ -660,6 +660,49 @@ p{
     background-color: #FAC213;
     transition: all 4s linear;
     height: 100%;
+}
+
+
+#about .contact-form{
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 19px 0 #0000002c;
+    margin: 0 auto 100px;
+}
+#about .contact-form h3{
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+#about form{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    border-radius: 10px;
+}
+#about form input,form textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 12px;
+}
+
+#about form button{
+    padding: 12px;
+    background: #e8aa42;
+    color:#fff;
+    font-size: 15px;
+    border:0;
+    outline: noen;
+    cursor: pointer;
+    width: 150px;
+    margin:20px 0;
+    border-radius: 30px;
 }
 /*************************** End About Section ****************************/
 /*************************** Contact Section ******************************/

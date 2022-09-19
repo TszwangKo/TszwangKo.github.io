@@ -212,6 +212,16 @@
                 <a href="./Aaron KO - CV (Software).pdf" class="cta" download>Download Resume</a>
             </div>
         </div>
+        <div class="contact-form">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <h3>GET IN TOUCH</h3>
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="text" id="phone" placeholder="Phone no." required>
+                    <textarea id="message" rows="10" placeholder="Your message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>sss
     </section>
     <!-- End About Section -->
     <hr>
@@ -278,7 +288,7 @@
         </div>
     </section>
     <!-- End Footer Section -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./app.js"></script>
-
 </body>
 </html>

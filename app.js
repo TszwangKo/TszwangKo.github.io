@@ -30,8 +30,23 @@ menu_item.forEach((item)=>{
     })
 })
 
-
-
+// * This part is for the form
+function sendEmail() {
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "aaronkoserver@gmail.com",
+        Password : "E284953DE3625513FEE6E167713EB341DACD",
+        To : 'aaronkoserver@gmail.com',
+        From : 'aaronkoserver@gmail.com',
+        Subject : "Enquiry from tszwangko.github.com.io",
+        Body : "Name: " + document.getElementById("name").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> Phone No: " + document.getElementById("phone").value
+        + "<br> Message: " + document.getElementById("message").value
+    }).then(
+        message => alert("Email sent successfully")
+    );
+}
 
 var player = document.getElementById("player");
 const btn = document.querySelector('.about .col-right .player .control .button');
