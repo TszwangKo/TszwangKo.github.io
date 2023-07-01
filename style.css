@@ -479,6 +479,13 @@ p{
 }
 #projects .project-item:nth-child(3) .project-img video{
     flex-basis: 50%;
+    width: 100%;
+    bottom: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#projects .project-item:nth-child(4) .project-img video{
+    flex-basis: 50%;
     height: 100%;
     overflow: hidden;
     position: absolute;
